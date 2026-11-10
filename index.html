@@ -115,13 +115,25 @@
   .chips { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; align-content: flex-start; }
   .chips li { padding: 6px 14px; border: 1px solid var(--line); background: var(--card); border-radius: 999px; font-weight: 500; }
 
+  .cols { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; margin-top: 40px; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+  .panel h3 { font-family: var(--display); font-size: 1.25rem; margin: 0 0 16px; }
+  .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .plain b, .timeline b { display: block; font-weight: 600; }
+  .plain span, .timeline span { display: block; color: var(--muted); font-size: .95rem; }
+  .timeline { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 2px solid var(--accent); display: grid; gap: 20px; }
+  .timeline li { display: grid; gap: 2px; }
+  .timeline time { font-family: var(--display); font-weight: 700; color: var(--board); font-size: .95rem; }
+  @media (prefers-color-scheme: dark) { .timeline time { color: var(--accent); } }
+  .avail { margin: 24px 0 0; color: var(--muted); }
+
   footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 36px 0 56px; }
   footer p { margin: 0 0 14px; }
   .links { display: flex; flex-wrap: wrap; gap: 22px; }
   .links a { font-weight: 600; text-underline-offset: 5px; }
 
   @media (max-width: 760px) {
-    .project, .about { grid-template-columns: 1fr; gap: 20px; }
+    .project, .about, .cols { grid-template-columns: 1fr; gap: 20px; }
     nav a { margin-left: 14px; }
     .rates thead { display: none; }
     .rates, .rates tbody, .rates tr, .rates td { display: block; width: 100%; }
@@ -210,17 +222,46 @@
       <h2 id="t-sobre">Sobre mí</h2>
       <div class="about">
         <div>
-          <p>Armo mi portfolio de ciencia de datos en Python. Ya construí modelos con scikit-learn y me interesa aplicarlos a economía y finanzas: inflación, dólar y bolsa.</p>
-          <p>Me gusta que cada análisis termine en una conclusión que se entienda sin ser especialista.</p>
+          <p>Armo mi portfolio de ciencia de datos en Python. Estudio la Licenciatura en Sistemas Informáticos, hice el curso de Ciencias de Datos en la UTN y ya construí modelos con scikit-learn.</p>
+          <p>Vengo de trabajos de atención al cliente y gestión administrativa. Ahí aprendí a organizarme bajo presión, negociar y explicar las cosas de forma simple, algo que llevo a cada análisis.</p>
+          <p>Busco integrarme a un equipo donde pueda aplicar programación y gestión administrativa, y seguir aprendiendo con compromiso y responsabilidad.</p>
         </div>
         <ul class="chips" aria-label="Herramientas">
           <li>Python</li>
+          <li>C++</li>
           <li>scikit-learn</li>
           <li>Streamlit</li>
           <li>HTML y JavaScript</li>
           <li>GitHub</li>
+          <li>Paquete Office</li>
+          <li>Sistema Tango</li>
         </ul>
       </div>
+
+      <div class="cols">
+        <div class="panel">
+          <h3>Formación</h3>
+          <ul class="plain">
+            <li><b>Licenciatura en Sistemas Informáticos</b></li>
+            <li><b>Curso de Ciencias de Datos</b><span>UTN</span></li>
+            <li><b>Curso de Programación básica</b><span>Escuela Media N.º 10 de Wilde</span></li>
+            <li><b>Curso de Sistema de Gestión Tango</b><span>Axoft</span></li>
+            <li><b>Inglés</b><span>Avanzado en lectura y escritura, intermedio en conversación</span></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Experiencia</h3>
+          <ol class="timeline">
+            <li><time>2025 – actual</time><div><b>Fiambrería de supermercado</b><span>Atención al cliente, manejo de caja y medios de pago, control de fechas y orden del sector.</span></div></li>
+            <li><time>2025</time><div><b>Gestora de cobranza, estudio jurídico</b><span>Cobranzas judiciales de tarjetas de crédito, negociación de pagos y armado de documentación.</span></div></li>
+            <li><time>2024</time><div><b>Gestoría de obra social, call center</b><span>Atención a afiliados, actualización de datos y seguimiento de trámites.</span></div></li>
+            <li><time>2022 – 2024</time><div><b>Gerente de maxikiosco</b><span>Pedidos, stock, caja y proveedores, y supervisión del equipo.</span></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <p class="avail">Disponibilidad horaria, inmediata y para viajar.</p>
     </section>
   </main>
 
